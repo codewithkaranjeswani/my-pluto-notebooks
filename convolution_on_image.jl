@@ -46,7 +46,6 @@ function convolve(M, kernel, M_index_func=clamp_at_boundary)
     
     half_height = height ÷ 2
     half_width = width ÷ 2
-    println(size(M))
     new_image = similar(M)
 
 	# (i, j) loop over the original image
