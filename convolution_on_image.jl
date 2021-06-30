@@ -18,7 +18,11 @@ begin
 end
 
 # ╔═╡ 0c8998d9-d8c1-40c3-b147-f44003fef025
-philip = load("philip.jpg");
+begin
+	url = "https://i.imgur.com/VGPeJ6s.jpg"
+	download(url, "philip.jpg")
+	philip = load("philip.jpg");
+end
 
 # ╔═╡ 03a8f21d-c985-49b2-9a5e-9bd4355b2d72
 decimate(img, k) = img[1:k:end, 1:k:end]
