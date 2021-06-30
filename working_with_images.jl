@@ -4,14 +4,22 @@
 using Markdown
 using InteractiveUtils
 
+# ╔═╡ 41201500-ad8c-451d-99a7-ab4942e23d33
+begin
+    import Pkg
+    # activate a clean environment
+    Pkg.activate(mktempdir())
+
+    Pkg.add(name="Images")
+
+	using Images
+end
+
 # ╔═╡ 11e70fe0-d987-11eb-245c-db81de0329fb
-url = "https://i.imgur.com/VGPeJ6s.jpg"  
+url = "https://i.imgur.com/VGPeJ6s.jpg"
 
 # ╔═╡ 843a6c5c-f382-474b-addb-8941e6752770
-begin
-	using Images
-	download(url, "philip.jpg")
-end
+download(url, "philip.jpg")
 
 # ╔═╡ 44f16bc6-0ad2-4dfe-80c0-db2ea763befc
 philip = load("philip.jpg")
@@ -76,6 +84,7 @@ begin
 end
 
 # ╔═╡ Cell order:
+# ╠═41201500-ad8c-451d-99a7-ab4942e23d33
 # ╠═11e70fe0-d987-11eb-245c-db81de0329fb
 # ╠═843a6c5c-f382-474b-addb-8941e6752770
 # ╠═44f16bc6-0ad2-4dfe-80c0-db2ea763befc
